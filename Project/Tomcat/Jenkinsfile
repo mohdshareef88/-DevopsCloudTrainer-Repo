@@ -65,7 +65,7 @@ pipeline{
                       "files": [
                         {
                           "pattern": "*.war",
-                           "target": "artifactory-build-info"
+                           "target": "local-snapshot-repo"
                         }
                     ]
                 }'''
