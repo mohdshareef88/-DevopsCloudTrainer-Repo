@@ -65,7 +65,7 @@ pipeline{
                       "files": [
                         {
                           "pattern": "*.war",
-                           "target": "local-snapshot-repo"
+                           "target": "local-snapshot-repository"
                         }
                     ]
                 }'''
@@ -75,7 +75,7 @@ pipeline{
         stage ('Tomcat Deployment') {
            steps {
              script {
-                 deploy adapters: [tomcat7(credentialsId: 'tomcat-cred', path: '', url: 'http://13.234.231.138:8080')], contextPath: '/webapp-application', onFailure: false, war: 'webapp/target/webapp.war' 
+                 deploy adapters: [tomcat7(credentialsId: 'tomcat-cred', path: '', url: 'http://18.227.52.134:8080')], contextPath: '/webapp-app', onFailure: false, war: 'webapp/target/webapp.war' 
                     }
                   }
            }
