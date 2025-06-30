@@ -75,7 +75,7 @@ pipeline{
          parallel {
             stage('Ansible Dev Deployment') {
                 when {
-                  expression { "$Env_Name" == 'DEV' }
+                  expression { params.Env_Name == 'DEV' }
                  }
                  steps{
                     script {
@@ -86,7 +86,7 @@ pipeline{
 
             stage('Ansible Prod Deployment') {
                 when {
-                  expression { "$Env_Name" == 'PROD' }
+                  expression { params.Env_Name == 'PROD' }
                  }
                  steps{
                     script {
